@@ -80,6 +80,9 @@ def set_wm_wallpaper(img):
     elif shutil.which("habak"):
         util.disown(["habak", "-mS", img])
 
+    elif shutil.which("swww"):
+        util.disown(["swww", "img", img])
+
     elif shutil.which("display"):
         util.disown(["display", "-backdrop", "-window", "root", img])
 
